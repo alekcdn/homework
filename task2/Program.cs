@@ -8,13 +8,13 @@ Console.WriteLine("Введите второе число: ");
  
     if (a > b)
         {
-        Console.WriteLine("{0} это наибольшее число", a);
+        Console.WriteLine($"{a} это наибольшее число", a);
         }
  
         else
  
             {
-            Console.WriteLine("{0} это наибольшее число ", b);
+            Console.WriteLine($"{b} это наибольшее число ", b);
             }
  
 
