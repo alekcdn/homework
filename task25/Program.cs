@@ -14,7 +14,7 @@ else
 }
 int GetExp(int number1, int number2)
 {
-    int res = 1;
+    int res = number1;
     for (int i = 1; i < number2; i++)
     {
         res = res * number1;
