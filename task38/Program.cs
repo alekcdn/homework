@@ -15,7 +15,7 @@ double[] CreateArrayRnd()
     }
     return arr;
 }
-void SumMinMax(double[] arr)
+void DiffMinMax(double[] arr)
 {
     double max1 = Int32.MinValue;
     double min1 = Int32.MaxValue ;
@@ -47,4 +47,4 @@ double[] array = CreateArrayRnd();
 Console.WriteLine("Создан массив:");
 PrintArray(array);
 Console.WriteLine();
-SumMinMax(array);
+DiffMinMax(array);
