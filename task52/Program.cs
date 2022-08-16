@@ -22,7 +22,7 @@ for (int j = 0; j < arr.GetLength(1); j++)
         res = (res + arr[i, j]);
     }
     res = res / row;
-    Console.Write(Math.Round(res, 3) + "  ");
+    Console.Write(Math.Round(res, 2) + "  ");
 }
 
 void GetArrayRandom(int[,] array)
