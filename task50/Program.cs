@@ -7,7 +7,6 @@
 // 8 4 2 4
 // 1, 7 -> такого числа в массиве нет
 
-// Console.WriteLine("Задайте величину массива");
 Console.WriteLine("Введите номер строки : ");
 int row = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите номер столбца : ");
