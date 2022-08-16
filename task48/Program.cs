@@ -13,7 +13,7 @@ void PrintMatrix(int[,] array)
         {
             if (j == 0) Console.Write("[");
             if (j < array.GetLength(1) - 1) Console.Write($"{array[i, j], 3},");
-      else Console.Write($"{array[i,j], 3}]");
+      else Console.Write($"{array[i, j], 3}]");
         }
         Console.WriteLine();
     }
