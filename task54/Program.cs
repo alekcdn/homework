@@ -41,7 +41,7 @@ void PrintMatrix(int[,] array)
             else Console.Write($"{array[i, j],3}]");
             }
         }
-    Console.WriteLine();
+        Console.WriteLine();
     }
 }
 void SortMatrix(int[,] array)
