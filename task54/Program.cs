@@ -16,6 +16,7 @@ int row = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите количество столбцов : ");
 int column = Convert.ToInt32(Console.ReadLine());
 int[,] arr = new int[row, column];
+
 GetArrayRandom(arr);
 Console.WriteLine("Исходный массив");
 PrintMatrix(arr);
