@@ -29,6 +29,7 @@ void GetArrayRandom(int[,] array)
         for (int j = 0; j < array.GetLength(1); j++)
             array[i, j] = Convert.ToInt32(new Random().Next(0, 9));
 }
+
 void PrintMatrix(int[,] array)
 {
     for (int i = 0; i < array.GetLength(0); i++)
@@ -44,6 +45,7 @@ void PrintMatrix(int[,] array)
         Console.WriteLine();
     }
 }
+
 void SortMatrix(int[,] array)
 {
     for (int i = 0; i < array.GetLength(0); i++)
