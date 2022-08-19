@@ -17,7 +17,6 @@
 // 10 6 24 49
 
 Console.WriteLine("Задайте параметры массивов");
-
 Console.WriteLine("Введите количество строк : ");
 int row = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите количество столбцов : ");
