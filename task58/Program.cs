@@ -22,7 +22,7 @@ int[,] newArr = new int[row, column1];
 
 if (column != row1)
 {
-    Console.WriteLine("Такие матрицы не согласованы! ");
+    Console.WriteLine("Такие матрицы не согласованы!");
     Console.WriteLine("Число столбцов матрицы 0 не равно числу строк матрицы 1. ");
 }
 else
