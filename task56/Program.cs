@@ -46,7 +46,7 @@ void PrintMatrix(int[,] array)
 }
 
 int minSum = Int32.MaxValue;
-int line = 0;
+int minSumRow = 0;
 
 for (int i = 0; i < arr.GetLength(0); i++)
 {    int sum = 0;
@@ -58,7 +58,7 @@ for (int i = 0; i < arr.GetLength(0); i++)
     if (sum < minSum)
     {
         minSum = sum;
-        line++;
+        minSumRow = i + 1;
     }
 }
-Console.WriteLine($"Наименьшая сумма элементов в(во) {line}-й строке => {minSum}");
+Console.WriteLine($"Наименьшая сумма элементов в(во) {minSumRow}-й строке => {minSum}");
