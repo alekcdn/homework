@@ -34,14 +34,14 @@ GetArrayRandom(arr1);
 Console.WriteLine("Матрица 1:");
 PrintMatrix(arr1);
 MultyMatrix(arr, arr1, newArr);
-Console.WriteLine("Произведение матриц:");
+Console.WriteLine("Произведение матриц (0 X 1):");
 PrintMatrix(newArr);
 
 void GetArrayRandom(int[,] array)
 {
     for (int i = 0; i < array.GetLength(0); i++)
         for (int j = 0; j < array.GetLength(1); j++)
-            array[i, j] = Convert.ToInt32(new Random().Next(2, 5));
+            array[i, j] = Convert.ToInt32(new Random().Next(-10, 10));
 }
 
 void PrintMatrix(int[,] array)
@@ -52,8 +52,8 @@ void PrintMatrix(int[,] array)
         {
             if (j == 0) Console.Write("[");
             {
-                if (j < array.GetLength(1) - 1) Console.Write($"{array[i, j],3}, ");
-                else Console.Write($"{array[i, j],3}]");
+                if (j < array.GetLength(1) - 1) Console.Write($"{array[i, j],4}, ");
+                else Console.Write($"{array[i, j],4}]");
             }
         }
         Console.WriteLine();
