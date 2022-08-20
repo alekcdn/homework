@@ -1,45 +1,47 @@
 ﻿// Задача 58: Задайте две матрицы. Напишите программу, 
 // которая будет находить произведение двух матриц.
-// Например, заданы 2 массива:
-// 1 4 7 2
-// 5 9 2 3
-// 8 4 2 4
-// 5 2 6 7
-// и
-// 1 5 8 5
-// 4 9 4 2
-// 7 2 2 6
-// 2 3 4 7
-// Их произведение будет равно следующему массиву:
-// 1 20 56 10
-// 20 81 8 6
-// 56 8 4 24
-// 10 6 24 49
+// Например, даны 2 матрицы:
+// 2 4 | 3 4
+// 3 2 | 3 3
+// Результирующая матрица будет:
+// 18 20
+// 15 18
 
-Console.WriteLine("Задайте параметры массивов");
-Console.WriteLine("Введите количество строк : ");
+Console.WriteLine("Задайте параметры матриц");
+Console.WriteLine("Введите количество строк матрицы 0 : ");
 int row = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Введите количество столбцов : ");
+Console.WriteLine("Введите количество столбцов матрицы 0 : ");
 int column = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите количество строк матрицы 1 : ");
+int row1 = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите количество столбцов матрицы 1 : ");
+int column1 = Convert.ToInt32(Console.ReadLine());
 int[,] arr = new int[row, column];
-int[,] arr1 = new int[row, column];
-int[,] newArr = new int[row, column];
+int[,] arr1 = new int[row1, column1];
+int[,] newArr = new int[row, column1];
 
+if (column != row1)
+{
+Console.WriteLine("Такие матрицы не согласованы! ");
+Console.WriteLine("Число столбцов матрицы 0 не равно числу строк матрицы 1. ");
+}
+else
+{
 GetArrayRandom(arr);
-Console.WriteLine("Первый массив:");
+Console.WriteLine("Матрица 0:");
 PrintMatrix(arr);
 GetArrayRandom(arr1);
-Console.WriteLine("Второй массив:");
+Console.WriteLine("Матрица 1:");
 PrintMatrix(arr1);
 MultyMatrix(arr, arr1, newArr);
-Console.WriteLine("Произведение массивов:");
+Console.WriteLine("Произведение матриц:");
 PrintMatrix(newArr);
 
 void GetArrayRandom(int[,] array)
 {
     for (int i = 0; i < array.GetLength(0); i++)
         for (int j = 0; j < array.GetLength(1); j++)
-            array[i, j] = Convert.ToInt32(new Random().Next(-10, 10));
+            array[i, j] = Convert.ToInt32(new Random().Next(2, 5));
 }
 
 void PrintMatrix(int[,] array)
@@ -64,9 +66,11 @@ void MultyMatrix(int[,] array1, int[,] array2, int[,] newArray)
         for (int j = 0; j < newArray.GetLength(1); j++)
         {
             int res = 0;
+            for (int k = 0; k < array1.GetLength(1); k++)
             {
-                res = array1[i, j] * array2[i, j];
+                res += array1[i, k] * array2[k, j];
             }
             newArray[i, j] = res;
         }
+}
 }
