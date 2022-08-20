@@ -19,8 +19,6 @@ int[,] arr = new int[row, column];
 GetArrayRandom(arr);
 Console.WriteLine("Исходный массив");
 PrintMatrix(arr);
-// MinSumElements(arr);
-
 
 void GetArrayRandom(int[,] array)
 {
